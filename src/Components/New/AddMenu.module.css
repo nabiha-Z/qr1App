@@ -1,0 +1,32 @@
+.gridItem {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px 10px #fbfbfb;
+}
+.sub1 {
+  grid-column: span 2;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.anchor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100px;
+  width: 100%;
+  margin: 0px;
+  border: 2px dashed #1cb56d;
+  border-radius: 10px;
+}
+.a1 {
+  margin-top: 38px;
+  align-self: center;
+}
+.a2 {
+  padding: 0 10px 5px 0;
+  margin-top: auto;
+  font-size: x-small;
+  align-self: flex-end;
+}

@@ -1,0 +1,65 @@
+.gridItem {
+  height: max-content;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 2px 2px 8px 10px #fbfbfb;
+}
+.gridItem h6 {
+  margin: 0;
+  padding: 10px 0 10px 20px;
+  height: fit-content;
+  color: #1cb56d;
+}
+.item4 {
+  display: grid;
+  padding: 0 30px 0 20px;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: repeat(4, 50px);
+  gap: 2px;
+  /* display: flex;
+  flex-direction: column;
+  padding: 0 20px; */
+}
+
+/* .createMenu {
+  grid-column: span 2;
+  border: 2px solid #1cb56d;
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  padding-left: 5px;
+} */
+
+.button {
+  grid-column: span 2;
+  border: 2px solid #1cb56d;
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  padding-left: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #1cb56d;
+}
+
+.icon {
+  object-fit: contain;
+  width: fit-content;
+  height: 85%;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+.label {
+  width: 100%;
+  margin: 0;
+  color: #1cb56d;
+  font-weight: 500;
+}
+.sub5:hover {
+  background-color: lightgreen;
+  border-color: lightgreen;
+}
