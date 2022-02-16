@@ -7,7 +7,7 @@ const Input = (props) => {
       className={`${classes.createMenu}`}
       style={{ gridColumn: `span ${props.span}` }}
     >
-      {props.imageSrc.length !== 0 && (
+      {props.imageSrc.trim().length !== 0 && (
         <img className={classes.icon} src={props.imageSrc} alt="" />
       )}
       <div style={{ paddingLeft: "15px", width: "100%" }}>

@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./CreateMenuList.module.css";
-import Input from "./Input";
+import Input from "../Input";
 
 const CreateMenuList = () => {
   return (

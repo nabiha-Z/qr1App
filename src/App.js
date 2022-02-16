@@ -5,17 +5,14 @@ import { stickyHeader } from "./Utilities/stickyHeader";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import Home from "./Components/Home";
-import Profile from "./Components/Profile";
-import CreateMenu from "./Components/CreateMenu";
-import Survey from "./Components/Survey";
-import Restaurant from "./Components/Restaurant";
-import Register from "./Components/Register";
-import CreateQR from "./Components/CreateQR";
+
 import Signin from "./Components/Signin";
-
+import Menu from "./Components/New/Menu/Menu";
 import Dashboard from "./Components/New/Dashboard";
+import Survey from "./Components/New/Survey/Survey";
 
-import CreateSurvey from "./Components/New/CreateSurvey";
+import CreateMenuItem from "./Components/New/Menu/CreateMenuItem";
+import UploadMenu from "./Components/New/Menu/UploadMenu";
 
 function App() {
   useEffect(() => {
@@ -35,15 +32,17 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="create-qr" element={<CreateQR />} />
-            <Route path="/mydash" element={<Profile />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/restaurant" element={<Restaurant />} />
-            <Route path="/survey" element={<Survey />} />
-            <Route path="/create-survey" element={<CreateSurvey />} />
-            <Route path="/create-menu" element={<CreateMenu />} />
-            <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Signin />} />
+            <Route path="/dashboard" element={<Dashboard />}>
+              <Route index element={<Menu />} />
+              <Route path="/dashboard/menu" element={<Menu />} />
+              <Route path="/dashboard/survey" element={<Survey />} />
+              <Route path="/dashboard/upload-menu" element={<UploadMenu />} />
+              <Route
+                path="/dashboard/create-menu"
+                element={<CreateMenuItem />}
+              />
+            </Route>
           </Routes>
           <Footer />
         </BrowserRouter>

@@ -1,15 +1,6 @@
 import React, { useState } from "react";
 import "./Dashboard.css";
-import { Link } from "react-router-dom";
-import DisplayItem from "./DisplayItem";
-import CreateSurvey from "./CreateSurvey";
-import CreateMenuList from "./CreateMenuList";
-import AddMenu from "./AddMenu";
-import ViewSurvey from "./Survey/ViewSurvey";
-import UploadMenu from "./Menu/UploadMenu";
-import DashBoard1 from "./DashBoard1";
-import DashBoard2 from "./Dashboard2";
-import MenuPreview from "./Menu/MenuPreview";
+import { Link, Outlet } from "react-router-dom";
 
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState("MENU");
@@ -24,27 +15,18 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="" style={{ zIndex: "10" }}>
-      <div style={{ height: "0px" }}></div>
+    <div className="main" style={{ zIndex: "10" }}>
       <div className="grid-container">
-        <div className="card-body grid-item item1">
+        <div className=" grid-item item1">
           <div className="my-logo">
-            <img
-              src="../assets/images/brand/Logo_QR_2.png"
-              alt="logo"
-              /* style={{ width: "42px", height: "42px" }} */
-            ></img>
-            <h4
-            /* style={{ color: "#1cb56d", textAlign: "center", height: "100px" }} */
-            >
-              QR it Now
-            </h4>
+            <img src="../assets/images/brand/Logo_QR_2.png" alt="logo"></img>
+            <h4>QR it Now</h4>
           </div>
-          <a
+          <Link
             className={
               activeTab === "MENU" ? "side-item activate" : "side-item"
             }
-            href="#"
+            to="/dashboard/menu"
             onClick={menuTabHandler}
           >
             <img
@@ -53,12 +35,12 @@ const Dashboard = () => {
               alt="Food-item"
             />{" "}
             <span style={{ marginRight: "80px" }}> Menu</span>
-          </a>
-          <a
+          </Link>
+          <Link
             className={
               activeTab === "SURVEY" ? "side-item activate" : "side-item"
             }
-            href="#"
+            to="/dashboard/survey"
             onClick={surveyTabHandler}
           >
             <img
@@ -67,7 +49,7 @@ const Dashboard = () => {
               alt="Food-item"
             />
             <span>Survey</span>
-          </a>
+          </Link>
           <Link className="side-item side3" to="/">
             <img
               src="../assets/images/brand/logout.png"
@@ -100,36 +82,8 @@ const Dashboard = () => {
             <span style={{ marginRight: "20px" }}>Josh Wq</span>
           </div>
         </div>
-        {activeTab === "MENU" && altTab ? (
-          <DashBoard2 menuTab={menu} />
-        ) : (
-          <DashBoard1
-            activeTab={activeTab}
-            onAltTab={setAltTab}
-            onMenu={setMenu}
-          />
-        )}
-
-        {/* <div className="grid-item item3">
-            <h5 style={{ paddingLeft: "20px" }}> All Menus</h5>
-            
-            <div className="flex-row1">
-              <DisplayItem />
-              <DisplayItem />
-              <DisplayItem />
-              <DisplayItem />
-            </div>
-            <div className="flex-row2">
-              <DisplayItem />
-              <DisplayItem />
-              <DisplayItem />
-              <DisplayItem />
-            </div>
-          </div>
-          {activeTab === "MENU" ? <CreateMenuList /> : <CreateSurvey />}
-        {activeTab === "MENU" ? <AddMenu /> : <ViewSurvey />} */}
+        <Outlet />
       </div>
-      <div style={{ height: "0px" }}></div>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import "./DisplayItem.css";
 
-const DisplayItem = () => {
+const DisplayItem = (props) => {
   return (
     <div className="flex-item">
       <img src="../assets/images/brand/menu.png" alt="Food-item" />
@@ -13,7 +13,7 @@ const DisplayItem = () => {
             padding: "0",
           }}
         >
-          Restaurant Menu 1
+          {props.text}
         </p>
         <p style={{ margin: "0", padding: "0", fontSize: "x-small" }}>
           12 jan 2022

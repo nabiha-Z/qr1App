@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import classes from "./AddMenu.module.css";
 
 const ViewSurvey = (props) => {
@@ -15,24 +16,27 @@ const ViewSurvey = (props) => {
     <div className={`${["card-body"]} ${classes.gridItem}`}>
       <div className={classes.sub1}>
         <h6 style={{ color: "#1cb56d" }}>Add Menu</h6>
-        <a href="#" className={classes.anchor} onClick={uploadMenuHandler}>
+        <Link to="/dashboard/upload-menu" className={classes.anchor}>
           <span className={classes.a1} style={{ color: "#1cb56d" }}>
             Upload Menu Items
           </span>
-          <a href="##" className={classes.a2} style={{ color: "#1cb56d" }}>
+          <Link
+            to="/dashboard/upload-menu"
+            className={classes.a2}
+            style={{ color: "#1cb56d" }}
+          >
             {" "}
             Download Template Excel{" "}
-          </a>
-        </a>
+          </Link>
+        </Link>
         <h6 style={{ textAlign: "center" }}>OR</h6>
-        <a
-          href="#"
+        <Link
+          to="/dashboard/create-menu"
           className={classes.anchor}
           style={{ color: "#1cb56d" }}
-          onClick={createMenuHandler}
         >
           Create Menu Items
-        </a>
+        </Link>
       </div>
     </div>
   );

@@ -1,3 +1,7 @@
+.main {
+  height: 100vh;
+}
+
 .my-logo {
   display: flex;
   flex-direction: column;
@@ -16,8 +20,8 @@
 }
 
 .grid-container {
-  height: 650px;
-  padding: 20px 60px 60px 20px;
+  height: 100%;
+  padding: 40px 80px 60px 40px;
   margin: 0px;
   background-color: white;
   display: grid;
@@ -32,6 +36,7 @@
 }
 
 .item1 {
+  padding: 28px;
   grid-row: span 3;
 }
 .item2 {
@@ -147,12 +152,13 @@
 }
 
 .side-item:hover {
-  background-color: #1cb56d;
+  background-color: lightgreen;
   color: black;
 }
-.side-item:active {
-  background-color: lightgreen;
-}
+/* .side-item:active {
+  background-color: #1cb56d;
+  color: black;
+} */
 
 .side-item .tab-image {
   margin: 0 20px 10px 10px;
@@ -160,5 +166,6 @@
   float: left;
 }
 .activate {
-  background-color: lightgreen;
+  background-color: #1cb56d;
+  color: black;
 }
