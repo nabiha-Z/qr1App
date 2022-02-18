@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Dashboard.css";
+import classes from "./Dashboard.module.css";
 import { Link, Outlet } from "react-router-dom";
 
 const Dashboard = () => {
@@ -15,22 +15,28 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="main" style={{ zIndex: "10" }}>
-      <div className="grid-container">
-        <div className=" grid-item item1">
-          <div className="my-logo">
-            <img src="../assets/images/brand/Logo_QR_2.png" alt="logo"></img>
+    <div className={classes.main} style={{ zIndex: "10" }}>
+      <div className={classes.gridContainer}>
+        <div className={`${classes.gridItem} ${classes.item1}`}>
+          <div className={classes.myLogo}>
+            <img
+              style={{ objectFit: "contain" }}
+              src="../assets/images/brand/Logo_QR_2.png"
+              alt="logo"
+            ></img>
             <h4>QR it Now</h4>
           </div>
           <Link
             className={
-              activeTab === "MENU" ? "side-item activate" : "side-item"
+              activeTab === "MENU"
+                ? `${classes.sideItem} ${classes.activate}`
+                : `${classes.sideItem}`
             }
             to="/dashboard/menu"
             onClick={menuTabHandler}
           >
             <img
-              className="tab-image"
+              className={classes.tabImage}
               src="../assets/images/brand/fastFood.png"
               alt="Food-item"
             />{" "}
@@ -38,19 +44,21 @@ const Dashboard = () => {
           </Link>
           <Link
             className={
-              activeTab === "SURVEY" ? "side-item activate" : "side-item"
+              activeTab === "SURVEY"
+                ? `${classes.sideItem} ${classes.activate}`
+                : `${classes.sideItem}`
             }
             to="/dashboard/survey"
             onClick={surveyTabHandler}
           >
             <img
-              className="tab-image"
+              className={classes.tabImage}
               src="../assets/images/brand/survey.png"
               alt="Food-item"
             />
             <span>Survey</span>
           </Link>
-          <Link className="side-item side3" to="/">
+          <Link className={`${classes.sideItem} ${classes.side3}`} to="/">
             <img
               src="../assets/images/brand/logout.png"
               alt=""
@@ -59,7 +67,7 @@ const Dashboard = () => {
             Logout
           </Link>
         </div>
-        <div className="grid-item item2">
+        <div className={`${classes.gridItem} ${classes.item2}`}>
           <h4 style={{ color: "#1cb56d", paddingLeft: "20px" }}>Menus</h4>
           <div
             style={{

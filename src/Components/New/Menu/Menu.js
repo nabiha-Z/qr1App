@@ -1,12 +1,12 @@
 import React from "react";
 import AddMenu from "./AddMenu";
 import CreateMenuList from "./CreateMenuList";
-import DisplayItemList from "../DisplayItemList";
+import DisplayList from "../DisplayList";
 
 const Menu = () => {
   return (
     <>
-      <DisplayItemList text="Restaurant Menu 1" />
+      <DisplayList text="Restaurant menu 1" />
       <CreateMenuList />
       <AddMenu />
     </>

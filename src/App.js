@@ -13,6 +13,8 @@ import Survey from "./Components/New/Survey/Survey";
 
 import CreateMenuItem from "./Components/New/Menu/CreateMenuItem";
 import UploadMenu from "./Components/New/Menu/UploadMenu";
+import ViewItems from "./Components/New/ViewItems";
+import EditMenu from "./Components/New/Menu/EditMenu";
 
 function App() {
   useEffect(() => {
@@ -29,22 +31,30 @@ function App() {
     <div className="main-body">
       <div className="horizontalMenucontainer">
         <BrowserRouter>
-          <Header />
+          {/* <Header /> */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Signin />} />
+            <Route path="/menu" element={<UploadMenu />} />
             <Route path="/dashboard" element={<Dashboard />}>
               <Route index element={<Menu />} />
               <Route path="/dashboard/menu" element={<Menu />} />
               <Route path="/dashboard/survey" element={<Survey />} />
               <Route path="/dashboard/upload-menu" element={<UploadMenu />} />
+
               <Route
                 path="/dashboard/create-menu"
                 element={<CreateMenuItem />}
               />
+              <Route
+                path="/dashboard/view-items"
+                element={<ViewItems text="Restaurant" />}
+              />
+
+              <Route path="/dashboard/edit-items" element={<EditMenu />} />
             </Route>
           </Routes>
-          <Footer />
+          {/* <Footer /> */}
         </BrowserRouter>
       </div>
     </div>

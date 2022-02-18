@@ -1,21 +1,21 @@
-.my-logo {
+.myLogo {
   display: flex;
   flex-direction: column;
 
   margin-bottom: 3.5rem;
 }
-.my-logo > img {
+.myLogo > img {
   height: 50px;
   width: 100%;
   padding: 0;
   margin: 40px 0 0;
 }
-.my-logo > h4 {
+.myLogo > h4 {
   margin-top: 20px;
   text-align: center;
 }
 
-.grid-container {
+.gridContainer {
   height: 650px;
   padding: 20px 60px 60px 20px;
   margin: 0px;
@@ -25,7 +25,8 @@
   grid-template-rows: 10% 40% 50%;
   gap: 20px;
 }
-.grid-container .grid-item {
+.gridItem {
+  border-radius: 10px;
   background-color: white;
   border-radius: 10px;
   box-shadow: 2px 2px 8px 10px #fbfbfb;
@@ -52,13 +53,13 @@
   flex-direction: column;
 }
 
-.item3 .flex-row1 {
+.item3 .flexRow1 {
   display: flex;
   height: 50%;
   width: 100%;
 }
 
-.item3 .flex-row2 {
+.item3 .flexRow2 {
   display: flex;
   height: 50%;
   width: 100%;
@@ -81,7 +82,7 @@
   } */
 .item5 {
 }
-.side-item {
+.sideItem {
   height: 35px;
   display: flex;
 

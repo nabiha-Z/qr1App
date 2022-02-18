@@ -1,23 +1,18 @@
 import React from "react";
-import "./DisplayItemList.module.css";
+import classes from "./DisplayList.module.css";
 import DisplayItem from "./DisplayItem";
+import List from "./List";
 
 const DisplayItemList = (props) => {
   return (
     <>
-      <div className="grid-item item3">
+      <div className={`${classes.gridItem} ${classes.item3}`}>
         <h5 style={{ paddingLeft: "20px" }}> All Menus</h5>
-        <div className="flex-row1">
-          <DisplayItem text={props.text} />
-          <DisplayItem text={props.text} />
-          <DisplayItem text={props.text} />
-          <DisplayItem text={props.text} />
+        <div className={classes.flexRow1}>
+          <List text={props.text} />
         </div>
-        <div className="flex-row2">
-          <DisplayItem text={props.text} />
-          <DisplayItem text={props.text} />
-          <DisplayItem text={props.text} />
-          <DisplayItem text={props.text} />
+        <div className={classes.flexRow2}>
+          <List text={props.text} />
         </div>
       </div>
 
