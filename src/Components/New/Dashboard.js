@@ -13,6 +13,9 @@ const Dashboard = () => {
   const surveyTabHandler = () => {
     setActiveTab("SURVEY");
   };
+  const qrTabHandler = () => {
+    setActiveTab("QR");
+  };
 
   return (
     <div className={classes.main} style={{ zIndex: "10" }}>
@@ -57,6 +60,22 @@ const Dashboard = () => {
               alt="Food-item"
             />
             <span>Survey</span>
+          </Link>
+          <Link
+            className={
+              activeTab === "QR"
+                ? `${classes.sideItem} ${classes.activate}`
+                : `${classes.sideItem}`
+            }
+            to="/dashboard/qr-codes"
+            onClick={qrTabHandler}
+          >
+            <img
+              className={classes.tabImage}
+              src="../assets/images/brand/survey.png"
+              alt="QR-code"
+            />
+            <span>QR Codes</span>
           </Link>
           <Link className={`${classes.sideItem} ${classes.side3}`} to="/">
             <img

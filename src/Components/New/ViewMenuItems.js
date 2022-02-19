@@ -1,10 +1,11 @@
 import React from "react";
-import classes from "./ViewItem.module.css";
+import classes from "./ViewMenuItem.module.css";
 import MenuPreview from "./Menu/MenuPreview";
 import DisplayItem from "./DisplayItem";
 import List from "./List";
 import CreateMenuList from "./Menu/CreateMenuList";
 import CreateMenuItem from "./Menu/CreateMenuItem";
+import ViewSurvey from "./Survey/ViewSurvey";
 
 const ViewItems = (props) => {
   return (
@@ -13,13 +14,10 @@ const ViewItems = (props) => {
         <h4>View Menu</h4>
 
         <div className={classes.flexCol}>
-          {/* <CreateMenuItem /> */}
-
           <List text="Restaurant" />
           <List text="Restaurant" />
         </div>
       </div>
-
       <MenuPreview />
     </>
   );

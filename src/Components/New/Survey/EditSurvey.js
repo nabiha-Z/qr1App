@@ -2,64 +2,48 @@ import { Button } from "@material-ui/core";
 import React from "react";
 import Input from "../Input";
 
-import classes from "./EditMenu.module.css";
+import classes from "./EditSurvey.module.css";
+import ViewSurvey from "./ViewSurvey";
 
-import MenuPreview from "./MenuPreview";
-
-const EditMenu = () => {
+const EditSurvey = () => {
   return (
     <>
       <div className={classes.gridItem}>
-        <h6
+        <h4
           style={{
-            margin: "5px 0 5px 20px",
+            margin: "5px 20px 5px 20px",
             height: "fit-content",
             color: "#1cb56d",
           }}
         >
-          Edit Menu
-        </h6>
-        <p style={{ margin: "0 0 5px 20px", height: "fit-content" }}>
-          Restaurant Details
-        </p>
+          Edit Survey
+        </h4>
+
         <div className={classes.item4}>
           <Input
-            imageSrc="../assets/images/brand/fork.png"
-            text="Restaurant Name"
+            className={classes.sub1}
+            imageSrc="../assets/images/brand/survey.png"
+            text="Survey Name"
             span="2"
           />
           <Input
+            className={classes.sub1}
             imageSrc="../assets/images/brand/pin.png"
             text="Address"
             span="2"
           />
           <Input
+            className={classes.sub1}
             imageSrc="../assets/images/brand/building.png"
             text="City"
-            span="1"
-          />
-          <Input
-            imageSrc="../assets/images/brand/telephone.png"
-            text="Phone Number"
-            span="1"
-          />
-
-          <Input
-            imageSrc="../assets/images/brand/bars.png"
-            text="Menu Name"
             span="2"
           />
-          <p
-            style={{
-              margin: "0 0 5px 0px",
-              height: "fit-content",
-              gridColumn: "span 2",
-            }}
-          >
-            Menu Item Details
-          </p>
-          <Input imageSrc="" text="Item Name" span="1" />
-          <Input imageSrc="" text="Item Price" span="1" />
+          <Input
+            className={classes.sub1}
+            imageSrc="../assets/images/brand/bars.png"
+            text="Description"
+            span="2"
+          />
           <div
             style={{
               width: "100%",
@@ -134,9 +118,9 @@ const EditMenu = () => {
           </div>
         </div>
       </div>
-      <MenuPreview />
+      <ViewSurvey />
     </>
   );
 };
 
-export default EditMenu;
+export default EditSurvey;

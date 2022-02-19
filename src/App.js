@@ -13,8 +13,11 @@ import Survey from "./Components/New/Survey/Survey";
 
 import CreateMenuItem from "./Components/New/Menu/CreateMenuItem";
 import UploadMenu from "./Components/New/Menu/UploadMenu";
-import ViewItems from "./Components/New/ViewItems";
+import ViewMenuItems from "./Components/New/ViewMenuItems";
+import ViewSurveyItems from "./Components/New/Survey/ViewSurveyItems";
 import EditMenu from "./Components/New/Menu/EditMenu";
+import EditSurvey from "./Components/New/Survey/EditSurvey";
+import Qr from "./Components/New/QR Codes/Qr";
 
 function App() {
   useEffect(() => {
@@ -27,6 +30,7 @@ function App() {
   const dashTabHandler = () => {
     setActiveTab("DASH");
   };
+
   return (
     <div className="main-body">
       <div className="horizontalMenucontainer">
@@ -40,18 +44,25 @@ function App() {
               <Route index element={<Menu />} />
               <Route path="/dashboard/menu" element={<Menu />} />
               <Route path="/dashboard/survey" element={<Survey />} />
+              <Route path="/dashboard/qr-codes" element={<Qr />} />
               <Route path="/dashboard/upload-menu" element={<UploadMenu />} />
-
               <Route
                 path="/dashboard/create-menu"
                 element={<CreateMenuItem />}
               />
               <Route
                 path="/dashboard/view-items"
-                element={<ViewItems text="Restaurant" />}
+                element={<ViewMenuItems text="Restaurant" />}
               />
-
+              <Route
+                path="/dashboard/view-survey-items"
+                element={<ViewSurveyItems text="Survey" />}
+              />
               <Route path="/dashboard/edit-items" element={<EditMenu />} />
+              <Route
+                path="/dashboard/edit-survey-items"
+                element={<EditSurvey />}
+              />
             </Route>
           </Routes>
           {/* <Footer /> */}
