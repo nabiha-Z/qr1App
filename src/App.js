@@ -10,14 +10,14 @@ import Signin from "./Components/Signin";
 import Menu from "./Components/New/Menu/Menu";
 import Dashboard from "./Components/New/Dashboard";
 import Survey from "./Components/New/Survey/Survey";
-
 import CreateMenuItem from "./Components/New/Menu/CreateMenuItem";
 import UploadMenu from "./Components/New/Menu/UploadMenu";
 import ViewMenuItems from "./Components/New/ViewMenuItems";
+import ViewSingleMenu from "./Components/New/ViewSingleMenu";
 import ViewSurveyItems from "./Components/New/Survey/ViewSurveyItems";
 import EditMenu from "./Components/New/Menu/EditMenu";
 import EditSurvey from "./Components/New/Survey/EditSurvey";
-import Qr from "./Components/New/QR Codes/Qr";
+import Qr from "./Components/New/QRCodes/Qr";
 
 function App() {
   useEffect(() => {
@@ -52,7 +52,11 @@ function App() {
               />
               <Route
                 path="/dashboard/view-items"
-                element={<ViewMenuItems text="Restaurant" />}
+                element={<ViewMenuItems />}
+              />
+              <Route
+                path="/dashboard/view-menu/:mid"
+                element={<ViewSingleMenu />}
               />
               <Route
                 path="/dashboard/view-survey-items"
